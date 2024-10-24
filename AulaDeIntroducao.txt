@@ -1,0 +1,94 @@
+
+2022 finalizei 
+
+Minha expectativa obter mais conhecimento na parte de 
+inteligencia artificial 
+
+https://www.youtube.com/watch?v=hCmrMOzx5VA
+
+
+https://www.kaggle.com/
+
+
+df[['mileage', 'seats', 'kms_driven', 'engine', 'max_power', 'torque', 'price']].describe()
+
+px.violin(df[(df.kms_driven<300000) & (df.fuel_type!='5 Seats')], y='kms_driven', color='fuel_type', box=True)
+px.violin(df[(df.fuel_type!='5 Seats')], y='kms_driven', color='fuel_type', box=True)
+
+px.bar(df, x='ownsership')
+
+px.scatter(data_frame=df,
+           x='kms_driven',
+           y='torque',
+           marginal_y='box',
+           marginal_x='histogram')
+		   
+		   Professor, vc poderia por favor dar mais exemplos sobre os rótulos ?
+ 
+quais KPI?
+ 
+Vicio kk
+ 
+nao
+ 
+df['mileage'].describe()
+ 
+df['mileage'].mean()
+ 
+df[['mileage', 'seats', 'kms_driven', 'engine', 'max_power', 'torque', 'price']].describe()
+ 
+df['fuel_type'].value_counts()
+ 
+df['fuel_type'].value_counts(normalize='True')
+ 
+df[df.fuel_type != '5 Seats'].shape
+ 
+df[df.fuel_type.isin(['Petrol', 'Diesel'])]
+ 
+import plotly.express as px
+?px.violin
+ 
+https://plotly.com/python/violin/
+Violin
+Over 12 examples of Violin Plots including changing color, size, log axes, and more in Python.
+ 
+px.violin(df[(df.fuel_type!='5 Seats')], y='kms_driven', color='fuel_type', box=True)
+ 
+px.histogram(df, x='mileage', marginal='box')
+ 
+px.violin(df[(df.kms_driven<300000) & (df.fuel_type!='5 Seats')], y='kms_driven', color='fuel_type', box=True)
+ 
+px.violin(df[(df.fuel_type!='5 Seats')], y='kms_driven', color='fuel_type', box=True)
+ 
+px.bar(df, x='ownsership')
+ 
+px.scatter(data_frame=df,
+           x='kms_driven',
+           y='torque',
+           marginal_y='box',
+           marginal_x='histogram')
+ 
+df.corr(numeric_only=True)
+
+
+
+relação 
+0.9 para mais ou para menos indica uma correlação muito forte.
+0.7 a 0.9 positivo ou negativo indica uma correlação forte.
+0.5 a 0.7 positivo ou negativo indica uma correlação moderada.
+0.3 a 0.5 positivo ou negativo indica uma correlação fraca.
+0 a 0.3 positivo ou negativo indica uma correlação desprezível.
+
+
+
+df.duplicated()
+df.duplicated().sum()
+
+df[df.duplicated(keep=False)].sort_values('car_name')
+
+
+df['mileage'] = df['mileage'].fillna(0)
+#df['mileage'] = df['mileage'].fillna(df.mileage.mean())
+#df['mileage'] = df['mileage'].fillna(df.mileage.median())
+ 
+ 
